@@ -8,10 +8,7 @@
 
 ¡Es muy simple! Para obtener el enlace remoto directo, descargar el archivo físico, ver las guías de configuración y conocer nuestra historia, ingresen a nuestro portal:
 
-👉 **[Sitio Web Oficial de La Lindilla](https://frantdse.github.io/TVArgentinaOnline/)**
-
-> 📌 **Enlace Remoto M3U:** `https://gist.githubusercontent.com/frantdse/f6989518c73826ade6734c63c367af4c/raw/c7394358523c619a78ef57aa716d54d54a6640ac/gistfile1.txt`
-
+👉 **[Sitio Web Oficial de La Lindilla](https://frantdse.github.io/Lista-M3U-La-Lindilla/)**
 ---
 
 ### ✨ ¿Qué vas a encontrar en esta versión?
