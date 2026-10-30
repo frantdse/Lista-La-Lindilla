@@ -1,244 +1,547 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AuraPlay - Streaming & TV en Vivo</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Plus+Jakarta+Sans:wght@600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <!-- NAVEGACIÓN PRINCIPAL -->
-  <header class="navbar">
-    <div class="logo">
-      <div class="live-dot"></div>
-      <span>AURA</span><span>PLAY</span>
-    </div>
-
-    <div class="search-box">
-      <input type="text" placeholder="Buscar canal..." id="searchInput" onkeyup="filterChannels()">
-      <span class="search-counter" id="searchCounter">LIVE</span>
-    </div>
-
-    <div class="nav-tools">
-      <button class="btn-random" onclick="zappingAleatorio()">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
-        Aleatorio
-      </button>
-      <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" title="Cambiar Tema">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-      </button>
-    </div>
-  </header>
-
-  <!-- ESTRUCTURA PRINCIPAL -->
-  <div class="main-layout">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista M3U La Lindilla - TV Argentina & Noticias | Actualizado 29 oct 2026</title>
     
-    <!-- SIDEBAR / MENÚ SUPERIOR EN MÓVIL -->
-    <aside class="sidebar">
-      <div class="menu-category-label">Categorías</div>
-      <nav class="menu">
-        <a href="#inicio" class="active">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          Inicio
-        </a>
-        <a href="#noticias">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
-          Noticias
-        </a>
-        <a href="#television">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
-          Televisión
-        </a>
-        <a href="#radios">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M49 10a5 5 0 0 0 0 10"/><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
-          Radios FM
-        </a>
-        <a href="m3u.html">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Lista M3U Vitile
-        </a>
-      </nav>
-    </aside>
-
-    <!-- CONTENIDO -->
-    <main class="content">
-      
-      <!-- BANNER HERO -->
-      <section id="inicio" class="hero-banner animate-fade">
-        <div class="hero-text">
-          <h1>Señales en Vivo & Transmisión HD</h1>
-          <p>Explorá la grilla interactiva con reproductores optimizados para Smart TV, móviles y escritorio.</p>
-        </div>
-        <div class="hero-widget">
-          <span class="widget-title">ESTADO DE RED</span>
-          <strong style="font-size: 0.9rem; color: #22c55e;">● 100% Operativo</strong>
-        </div>
-      </section>
-
-      <!-- GRILLA DE NOTICIAS -->
-      <section id="noticias" class="section-group animate-fade">
-        <h2 class="grid-title">Noticias & Actualidad</h2>
-        <div class="channels-grid">
-          
-          <a href="tn.html" class="card" data-name="tn todo noticias">
-            <div class="thumbnail-wrapper">
-              <span class="badge news">ENVIVO</span>
-              <img src="https://img.youtube.com/vi/cb12KmMMDJA/maxresdefault.jpg" alt="TN" class="card-thumb">
-              <div class="play-overlay">▶</div>
-            </div>
-            <div class="card-body">
-              <h3>TN - Todo Noticias</h3>
-            </div>
-          </a>
-
-          <a href="c5n.html" class="card" data-name="c5n noticias">
-            <div class="thumbnail-wrapper">
-              <span class="badge news">ENVIVO</span>
-              <img src="https://img.youtube.com/vi/j6oh4Kqz3UM/maxresdefault.jpg" alt="C5N" class="card-thumb">
-              <div class="play-overlay">▶</div>
-            </div>
-            <div class="card-body">
-              <h3>C5N</h3>
-            </div>
-          </a>
-
-          <a href="a24.html" class="card" data-name="america 24 a24">
-            <div class="thumbnail-wrapper">
-              <span class="badge news">ENVIVO</span>
-              <img src="https://files.catbox.moe/495p3r.jpeg" alt="LN+" class="card-thumb">
-              <div class="play-overlay">▶</div>
-            </div>
-            <div class="card-body">
-              <h3>A24</h3>
-            </div>
-          </a>
-
-          <a href="canal26.html" class="card" data-name="canal 26 telecentro">
-            <div class="thumbnail-wrapper">
-              <span class="badge news">ENVIVO</span>
-              <img src="https://img.youtube.com/vi/Xb7jGW72WUU/maxresdefault.jpg" alt="Canal 26" class="card-thumb">
-              <div class="play-overlay">▶</div>
-            </div>
-            <div class="card-body">
-              <h3>Canal 26</h3>
-            </div>
-          </a>
-
-        </div>
-      </section>
-
-      <!-- GRILLA DE TELEVISIÓN ABIERTA -->
-      <section id="television" class="section-group animate-fade">
-        <h2 class="grid-title">Televisión Abierta</h2>
-        <div class="channels-grid">
-          
-          <a href="telefe.html" class="card" data-name="telefe aire">
-            <div class="thumbnail-wrapper">
-              <span class="badge air">AIRE</span>
-              <img src="https://files.catbox.moe/vft0l4.jpg" alt="Telefe" class="card-thumb">
-              <div class="play-overlay">▶</div>
-            </div>
-            <div class="card-body">
-              <h3>Telefe</h3>
-            </div>
-          </a>
-
-          <a href="eltrece.html" class="card" data-name="el trece aire">
-            <div class="thumbnail-wrapper">
-              <span class="badge air">AIRE</span>
-              <img src="https://picsum.photos/400/225?random=6" alt="El Trece" class="card-thumb">
-              <div class="play-overlay">▶</div>
-            </div>
-            <div class="card-body">
-              <h3>El Trece</h3>
-            </div>
-          </a>
-
-          <a href="america.html" class="card" data-name="america tv aire">
-            <div class="thumbnail-wrapper">
-              <span class="badge variety">VARIEDAD</span>
-              <img src="https://picsum.photos/400/225?random=7" alt="América TV" class="card-thumb">
-              <div class="play-overlay">▶</div>
-            </div>
-            <div class="card-body">
-              <h3>América TV</h3>
-            </div>
-          </a>
-
-        </div>
-      </section>
-
-      <!-- GRILLA DE RADIOS -->
-      <section id="radios" class="section-group animate-fade">
-        <h2 class="grid-title">Radios FM</h2>
-        <div class="channels-grid">
-
-          <a href="aspen.html" class="card" data-name="aspen 102.3 radio">
-            <div class="thumbnail-wrapper">
-              <span class="badge radio">FM</span>
-              <img src="https://picsum.photos/400/225?random=8" alt="Aspen" class="card-thumb">
-              <div class="play-overlay">📻</div>
-            </div>
-            <div class="card-body">
-              <h3>Aspen 102.3</h3>
-            </div>
-          </a>
-
-        </div>
-      </section>
-
-      <!-- FOOTER -->
-      <footer class="footer">
-        <div class="footer-links">
-          <a href="#">Términos de servicio</a>
-          <a href="#">Privacidad</a>
-          <a href="#">Soporte Técnico</a>
-        </div>
-        <p>© 2026 AuraPlay Network. Todos los derechos reservados.</p>
-      </footer>
-
-    </main>
-  </div>
-
-  <!-- SCRIPT DE LÓGICA INTEGRADA -->
-  <script>
-    // Cambio de tema
-    function toggleTheme() {
-      document.body.classList.toggle('light-theme');
-    }
-
-    // Buscador
-    function filterChannels() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const cards = document.querySelectorAll('.card');
-      const counter = document.getElementById('searchCounter');
-      let visible = 0;
-
-      cards.forEach(card => {
-        const name = card.getAttribute('data-name');
-        if (name.includes(input)) {
-          card.style.display = 'flex';
-          visible++;
-        } else {
-          card.style.display = 'none';
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['Montserrat', '"Plus Jakarta Sans"', 'sans-serif'],
+                        sub: ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                        }
+                    },
+                    boxShadow: {
+                        'apple-soft': '0 12px 32px -8px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.02)',
+                        'apple-hover': '0 20px 40px -12px rgba(244, 63, 94, 0.12), 0 8px 20px rgba(0, 0, 0, 0.04)'
+                    }
+                }
+            }
         }
-      });
+    </script>
+    
+    <style>
+        body {
+            background-color: #fafbfc;
+            color: #0f172a;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
 
-      counter.textContent = input ? `${visible}` : 'LIVE';
-    }
+        .glass-apple {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
 
-    // Zapping Aleatorio
-    function zappingAleatorio() {
-      const cards = Array.from(document.querySelectorAll('.card'));
-      const randomCard = cards[Math.floor(Math.random() * cards.length)];
-      if (randomCard) {
-        window.location.href = randomCard.getAttribute('href');
-      }
-    }
-  </script>
+        .glass-card {
+            background: #ffffff;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(251, 113, 133, 0.3);
+            box-shadow: 0 20px 35px -10px rgba(244, 63, 94, 0.08);
+        }
+
+        /* Canvas Sakura Flotante Libre */
+        #sakura-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 2;
+            background: transparent !important;
+            border: none !important;
+            outline: none !important;
+        }
+
+        /* SVG Ocean Waves */
+        .waves {
+            position: relative;
+            width: 100%;
+            height: 90px;
+            margin-bottom: -7px;
+            min-height: 70px;
+            max-height: 110px;
+        }
+
+        .parallax > use {
+            animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+        }
+        .parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; }
+        .parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; }
+        .parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; }
+        .parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; }
+
+        @keyframes move-forever {
+            0% { transform: translate3d(-90px,0,0); }
+            100% { transform: translate3d(85px,0,0); }
+        }
+
+        #toast {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen text-slate-800 antialiased selection:bg-rose-100 selection:text-rose-600">
+
+    <!-- CANVAS CEREZOS (Pétalos cayendo sin caja ni bordes) -->
+    <canvas id="sakura-canvas"></canvas>
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="sticky top-0 z-50 w-full glass-apple border-b border-slate-200/60 px-4 lg:px-8 py-3.5 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-400 flex items-center justify-center shadow-md shadow-rose-200 group-hover:scale-105 transition-transform">
+                    <span class="text-xl">🌸</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-extrabold text-lg tracking-tight text-slate-900 flex items-center gap-2">
+                        LA LINDILLA
+                        <span class="text-[10px] font-sub font-semibold px-2 py-0.5 rounded-full bg-rose-50 text-rose-600 border border-rose-200">M3U</span>
+                    </span>
+                    <span class="text-[11px] text-slate-500 font-medium">TV Argentina Familiar</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#inicio" class="hover:text-rose-600 transition-colors">Inicio</a>
+                <a href="#m3u" class="hover:text-rose-600 transition-colors">Lista M3U</a>
+                <a href="#historia" class="hover:text-rose-600 transition-colors">Nuestra Historia</a>
+                <a href="#faq" class="hover:text-rose-600 transition-colors">Preguntas Frecuentes</a>
+                <a href="#contacto" class="hover:text-rose-600 transition-colors">Contacto</a>
+            </nav>
+
+            <div class="hidden md:flex items-center">
+                <button onclick="copyM3uUrl()" class="px-5 py-2.5 rounded-full text-xs font-bold bg-slate-900 hover:bg-rose-600 text-white shadow-md shadow-slate-200 transition-all transform hover:-translate-y-0.5">
+                    Copiar Enlace M3U
+                </button>
+            </div>
+
+            <button id="menu-btn" class="md:hidden p-2.5 rounded-2xl bg-slate-100 text-slate-700 hover:text-slate-900 focus:outline-none">
+                <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full glass-apple border-b border-slate-200 py-6 px-6 shadow-xl">
+            <div class="flex flex-col gap-4 text-base font-semibold text-slate-700">
+                <a href="#inicio" class="mobile-link py-2 border-b border-slate-100 hover:text-rose-600">Inicio</a>
+                <a href="#m3u" class="mobile-link py-2 border-b border-slate-100 hover:text-rose-600">Lista M3U</a>
+                <a href="#historia" class="mobile-link py-2 border-b border-slate-100 hover:text-rose-600">Nuestra Historia</a>
+                <a href="#faq" class="mobile-link py-2 border-b border-slate-100 hover:text-rose-600">Preguntas Frecuentes</a>
+                <a href="#contacto" class="mobile-link py-2 hover:text-rose-600">Contacto</a>
+                <button onclick="copyM3uUrl()" class="mobile-link mt-2 text-center py-3 rounded-2xl bg-rose-500 text-white font-bold shadow-lg shadow-rose-200">
+                    Copiar Enlace M3U
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative pt-12 lg:pt-20 pb-16 overflow-hidden bg-gradient-to-b from-rose-50/40 via-white to-slate-50">
+        <div class="max-w-5xl mx-auto px-4 lg:px-8 text-center relative z-10">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-rose-200 text-xs font-sub font-semibold text-rose-600 mb-8 shadow-sm">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>🗓️ Actualizado: 29 oct 2026</span>
+            </div>
+
+            <h1 class="font-heading font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight text-slate-900 mb-6">
+                LISTA M3U <span class="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">LA LINDILLA</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-base sm:text-xl text-slate-600 font-normal leading-relaxed mb-8">
+                Televisión argentina abierta, noticias y entretenimiento en vivo. Sincronización continua, liviana y gratuita para tu hogar.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-10 text-sm text-slate-500 font-medium">
+                <span>Hecho y actualizado con ❤️ por</span>
+                <a href="https://github.com/frantdse" target="_blank" rel="noopener opacity-90" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-rose-200 hover:border-rose-300 text-xs font-bold text-slate-800 shadow-sm transition-all hover:bg-rose-50/50">
+                    <svg class="w-3.5 h-3.5 fill-current text-slate-800" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    frantdse
+                </a>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                <button onclick="copyM3uUrl()" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-sm shadow-lg shadow-rose-200 hover:shadow-rose-300 hover:scale-105 transition-all flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    Copiar Lista M3U
+                </button>
+                <a href="https://limewire.com/d/8gdNE#6kbpbGk184" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white border border-slate-200 hover:bg-slate-50 text-slate-800 font-bold text-sm shadow-sm transition-all flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                    Descargar .M3U
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: LISTA M3U & REPRODUCTOR INTEGRADO -->
+    <section id="m3u" class="py-16 max-w-5xl mx-auto px-4 lg:px-8 relative z-10">
+        
+        <div class="glass-card rounded-3xl p-6 sm:p-10 border border-slate-200 bg-white relative overflow-hidden shadow-apple-soft">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-100">
+                <div>
+                    <span class="px-3 py-1 rounded-full bg-rose-50 text-rose-600 text-xs font-bold border border-rose-100 inline-block mb-2">
+                        Enlace Remoto Directo
+                    </span>
+                    <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">Lista IPTV M3U</h2>
+                </div>
+                <div class="flex items-center gap-2 text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Sincronización Automática 2026
+                </div>
+            </div>
+
+            <!-- Caja de enlace M3U limpia -->
+            <div class="mb-8">
+                <p class="text-xs sm:text-sm text-slate-600 mb-3">
+                    Copia la siguiente URL e introdúcela en tu aplicación IPTV preferida (VLC, SSIPTV, Smart IPTV, TiviMate o IPTV Smarters):
+                </p>
+
+                <div class="relative flex flex-col sm:flex-row items-stretch gap-2 p-2 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div class="flex-1 p-3 font-mono text-xs text-slate-700 break-all select-all flex items-center">
+                        <span id="m3u-url">https://gist.githubusercontent.com/frantdse/f6989518c73826ade6734c63c367af4c/raw/c7394358523c619a78ef57aa716d54d54a6640ac/gistfile1.txt</span>
+                    </div>
+                    <button onclick="copyM3uUrl()" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-rose-600 text-white font-bold text-xs transition-all flex items-center justify-center gap-2 shadow-md shrink-0">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                        Copiar Enlace
+                    </button>
+                </div>
+            </div>
+
+            <!-- Marco de Demostración Apple Style -->
+            <div class="pt-6 border-t border-slate-100">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-heading font-bold text-base text-slate-900">Demostración en Video</h3>
+                    <span class="text-xs text-slate-400">Paso a paso de instalación</span>
+                </div>
+                <div class="rounded-2xl overflow-hidden bg-slate-900 aspect-video shadow-lg border border-slate-800">
+                    <iframe 
+                        src="https://rumble.com/embed/v6ykcjk/?pub=4njz2y" 
+                        class="w-full h-full border-0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: NUESTRA HISTORIA (EXPANDIDO) -->
+    <section id="historia" class="py-16 max-w-5xl mx-auto px-4 lg:px-8 relative z-10">
+        <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-200/80 bg-gradient-to-b from-white via-rose-50/20 to-white">
+            
+            <div class="max-w-3xl mx-auto">
+                <span class="text-xs font-sub font-bold text-rose-500 uppercase tracking-widest block mb-2">
+                    Trayectoria y Compromiso
+                </span>
+                <h2 class="font-heading font-black text-3xl sm:text-4xl text-slate-900 mb-6">
+                    La Historia Detrás de La Lindilla 🌸
+                </h2>
+
+                <div class="space-y-5 text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                    <p>
+                        <strong>Lista M3U La Lindilla</strong> nació en el corazón del norte argentino, en la cálida provincia de <strong>Santiago del Estero</strong>, como una respuesta genuina a una necesidad familiar común: poder acceder a la televisión pública, abierta y libre de Argentina sin complicaciones técnicas ni tarifas ocultas.
+                    </p>
+
+                    <p>
+                        Lo que comenzó como una simple lista recopilada para abuelos, tíos y amigos cercanos que querían ver las noticias nacionales y los canales de aire desde sus Smart TVs o teléfonos móviles, pronto se transformó en un proyecto colaborativo querido por miles de usuarios en todo el país y el exterior.
+                    </p>
+
+                    <div class="p-6 rounded-2xl bg-white border border-rose-100 my-6 shadow-sm">
+                        <h3 class="font-heading font-bold text-base text-slate-900 mb-2 flex items-center gap-2">
+                            <span>💡</span> Nuestra Filosofía
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-500">
+                            Creemos en la televisión abierta accesible y libre. No cobramos, no vendemos suscripciones ni alojamos transmisiones comerciales. Simplemente mantenemos enlaces abiertos públicos (Free-To-Air) ordenados, estables y actualizados periódicamente.
+                        </p>
+                    </div>
+
+                    <p>
+                        A lo largo de los años, con la dedicación de <strong>@frantdse</strong> y las sugerencias constantes de la comunidad, hemos evolucionado el sistema para ofrecer sincronización automática. Hoy, al llegar al <strong>29 de octubre de 2026</strong>, "La Lindilla" representa una alternativa limpia, ultra rápida y confiable para que cada hogar argentino mantenga sus pantallas encendidas con el contenido que le conecta a sus raíces.
+                    </p>
+                </div>
+
+                <!-- Hitos de La Lindilla -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-8 border-t border-slate-200">
+                    <div class="text-center p-4 rounded-2xl bg-white border border-slate-100">
+                        <span class="font-heading font-black text-2xl text-rose-500">2026</span>
+                        <p class="text-xs text-slate-500 mt-1">Totalmente Optimizado</p>
+                    </div>
+                    <div class="text-center p-4 rounded-2xl bg-white border border-slate-100">
+                        <span class="font-heading font-black text-2xl text-rose-500">100%</span>
+                        <p class="text-xs text-slate-500 mt-1">Señales Abiertas FTA</p>
+                    </div>
+                    <div class="text-center p-4 rounded-2xl bg-white border border-slate-100">
+                        <span class="font-heading font-black text-2xl text-rose-500">Gratis</span>
+                        <p class="text-xs text-slate-500 mt-1">Sin Complicaciones</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="py-16 max-w-4xl mx-auto px-4 lg:px-8 relative z-10">
+        <div class="text-center mb-10">
+            <span class="text-xs font-sub font-bold text-rose-500 uppercase tracking-wider">Centro de Ayuda</span>
+            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mt-1">Preguntas Frecuentes</h2>
+        </div>
+
+        <div class="space-y-3">
+            
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200">
+                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-slate-900 focus:outline-none">
+                    <span>¿Cómo instalo el enlace M3U en mi Smart TV o celular?</span>
+                    <svg class="faq-icon w-5 h-5 text-rose-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-5 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                    Copia el enlace remoto disponible en esta página, abre tu aplicación IPTV favorita (como IPTV Smarters, SSIPTV, TiviMate o VLC) y pégalo en el campo "Añadir URL / M3U Playlist". La lista cargará los canales automáticamente.
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200">
+                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-slate-900 focus:outline-none">
+                    <span>¿La lista se actualiza automáticamente?</span>
+                    <svg class="faq-icon w-5 h-5 text-rose-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-5 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                    Sí, si utilizas el <strong>Enlace Remoto</strong>. Cada vez que abras tu reproductor, este sincronizará la versión más reciente guardada en nuestros servidores sin necesidad de repetir la configuración.
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200">
+                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-slate-900 focus:outline-none">
+                    <span>¿Qué canales incluye La Lindilla?</span>
+                    <svg class="faq-icon w-5 h-5 text-rose-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-5 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                    Incluye transmisiones públicas de aire y noticias de Argentina como TN, A24, Crónica TV, Canal 26, C5N, Telefe, El Trece, América TV, TV Pública, El Nueve y señales de entretenimiento o radio FM.
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200">
+                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-slate-900 focus:outline-none">
+                    <span>¿Tiene algún costo utilizar esta lista?</span>
+                    <svg class="faq-icon w-5 h-5 text-rose-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-content hidden px-5 pb-5 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                    No, es 100% gratuita y comunitaria. Solo utilizamos transmisiones abiertas de libre acceso en internet.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: CONTACTO -->
+    <section id="contacto" class="py-16 max-w-4xl mx-auto px-4 lg:px-8 relative z-10">
+        <div class="glass-card rounded-3xl p-8 sm:p-10 text-center bg-gradient-to-b from-white to-rose-50/30 border border-rose-200">
+            <span class="text-3xl mb-2 inline-block">🌸</span>
+            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 mb-2">¿Quieres colaborar o reportar un canal?</h2>
+            <p class="text-slate-600 text-xs sm:text-sm mb-6 max-w-lg mx-auto">
+                Si encuentras alguna señal interrumpida o quieres aportar un canal público, escríbenos directamente.
+            </p>
+            <a href="mailto:unpocodeawita@gmail.com?subject=Contacto%20Lista%20M3U%20LA%20LINDILLA" class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs shadow-md shadow-rose-200 transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                Enviar Correo Electrónico
+            </a>
+        </div>
+    </section>
+
+    <!-- WAVES SVG BOTTOM -->
+    <div class="w-full overflow-hidden leading-none relative z-10">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(254, 205, 211, 0.4)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(253, 164, 175, 0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(251, 113, 133, 0.2)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200/80 py-8 relative z-10">
+        <div class="max-w-5xl mx-auto px-4 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+            <div class="flex items-center gap-2">
+                <span class="text-sm">🌸</span>
+                <span class="font-heading font-bold text-slate-800">Lista M3U La Lindilla</span>
+                <span>• Santiago del Estero</span>
+            </div>
+            <span>Hecho y actualizado con ❤️ por <strong>frantdse</strong> — 29 oct 2026</span>
+        </div>
+    </footer>
+
+    <!-- NOTIFICACIÓN TOAST -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3">
+        <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
+            ✓
+        </div>
+        <span class="text-xs font-semibold" id="toast-msg">¡Enlace M3U copiado con éxito!</span>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // 1. Menú Hamburguesa Móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            });
+        });
+
+        // 2. FAQ Accordion Toggle
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('.faq-icon');
+
+                content.classList.toggle('hidden');
+                if(!content.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // 3. Copiar URL y Toast Notification
+        function copyM3uUrl() {
+            const urlText = document.getElementById('m3u-url').innerText;
+            const tempInput = document.createElement('textarea');
+            tempInput.value = urlText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast('¡Enlace M3U copiado al portapapeles!');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.innerText = message;
+
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 3000);
+        }
+
+        // 4. ANIMACIÓN DE CEREZOS LIBRE Y SIN BORDES
+        const canvas = document.getElementById('sakura-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        class Petal {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * -height;
+                this.size = Math.random() * 6 + 4;
+                this.speedY = Math.random() * 1.1 + 0.4;
+                this.speedX = Math.random() * 0.6 - 0.3;
+                this.rotation = Math.random() * 360;
+                this.rotationSpeed = Math.random() * 1.5 - 0.75;
+                this.opacity = Math.random() * 0.35 + 0.25;
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += Math.sin(this.y * 0.008) + this.speedX;
+                this.rotation += this.rotationSpeed;
+
+                if (this.y > height + 20) {
+                    this.reset();
+                }
+            }
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate((this.rotation * Math.PI) / 180);
+                ctx.globalAlpha = this.opacity;
+
+                ctx.beginPath();
+                ctx.fillStyle = '#fb7185';
+                ctx.moveTo(0, 0);
+                ctx.bezierCurveTo(-this.size / 2, -this.size / 2, -this.size, this.size / 3, 0, this.size);
+                ctx.bezierCurveTo(this.size, this.size / 3, this.size / 2, -this.size / 2, 0, 0);
+                ctx.fill();
+
+                ctx.restore();
+            }
+        }
+
+        const petals = Array.from({ length: 28 }, () => new Petal());
+
+        function animateSakura() {
+            ctx.clearRect(0, 0, width, height);
+            petals.forEach(petal => {
+                petal.update();
+                petal.draw();
+            });
+            requestAnimationFrame(animateSakura);
+        }
+
+        animateSakura();
+    </script>
 </body>
-        </html>
+</html>
