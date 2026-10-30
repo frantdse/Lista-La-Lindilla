@@ -6,10 +6,9 @@
 
 ### 🚀 ¿Cómo acceder a la lista M3U? 🔗
 
-¡Es muy simple! Para obtener el enlace remoto directo, descargar el archivo físico, ver las guías de configuración y conocer nuestra historia, ingresen a nuestro portal:
+¡Es muy simple! Para obtener el enlace remoto directo, descargar el archivo físico, ver las guías de configuración y conocer nuestra historia, ingresen a nuestro portal: [[Nuestra Web!!]](https://frantdse.github.io/Lista-M3U-La-Lindilla/)
 
-Nuestra web!!
-(https://frantdse.github.io/Lista-M3U-La-Lindilla/)
+
 ---
 
 ### ✨ ¿Qué vas a encontrar en esta versión?
