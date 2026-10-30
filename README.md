@@ -8,7 +8,7 @@
 
 ¡Es muy simple! Para obtener el enlace remoto directo, descargar el archivo físico, ver las guías de configuración y conocer nuestra historia, ingresen a nuestro portal:
 
-👉 **[Sitio Web Oficial de La Lindilla](https://frantdse.github.io/Lista-M3U-La-Lindilla/)**
+[Sitio Web Oficial de La Lindilla](https://frantdse.github.io/Lista-M3U-La-Lindilla/)**
 ---
 
 ### ✨ ¿Qué vas a encontrar en esta versión?
