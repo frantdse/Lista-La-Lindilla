@@ -17,7 +17,7 @@ https://live-01-01-tn.vodgc.net/TN_DAI_Beta/index.m3u8
 https://g5.vxral-slo.transport.edge-access.net/a09/ngrp:cronicatv_video1-100044_all/Playlist.m3u8?sense=true
 
 #EXTINF:-1 tvg-id="0964" tvg-name="+Perfil" group-title="Noticias" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/60/%2BPerfil_Logo_2026.png", +Perfil
-https://unlimited1-saopaulo.dps.live/perfiltv/perfiltv.smil/playlist.m3u8
+https://unlimited1-us.dps.live/perfilplus/perfilplus.smil/playlist.m3u8
 
 #EXTINF:-1 tvg-id="0932" tvg-name="C5N" group-title="Noticias" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/C5N_2017_Alternate.svg/3840px-C5N_2017_Alternate.svg.png", C5N
 http://45.134.141.161:2200/ARG/C5N/index.m3u8
