@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/brand/la-lindilla.svg" alt="La Lindilla — televisión abierta argentina" width="440">
+  <img src="la-lindilla.svg" alt="La Lindilla — televisión abierta argentina" width="440">
 
   <p><strong>Televisión abierta, noticias y radio.</strong><br>Un proyecto comunitario nacido en Argentina, pensado para compartir contenido de forma simple y accesible.</p>
 
