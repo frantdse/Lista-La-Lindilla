@@ -73,7 +73,7 @@ https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/tvei_ame_main_1080.m3u8
 #EXTINF:-1 tvg-id="0205" tvg-name="DW Español" group-title="Variedad" tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Deutsche_Welle_symbol_2012.svg/3840px-Deutsche_Welle_symbol_2012.svg.png", DW Español
 https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/master.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.ibb.co/Ngr7kCHm/1000141512.png", CTV Internacional
+#EXTINF:-1 tvg-id="0530" tvg-name="Canal 20 Copan Ruinas group-title="Variedad" tvg-logo="https://i.ibb.co/Ngr7kCHm/1000141512.png", CTV Internacional
 https://tv.webmedialive.com/ctvinternacional/live/playlist.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-name="ENT Channel" group-title="Variedad" tvg-logo="https://www.40mediagroup.com/images/channels/ent-channel.png", ENT Channel
