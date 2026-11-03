@@ -1,119 +1,87 @@
 <div align="center">
+  <img src="assets/brand/la-lindilla.svg" alt="La Lindilla — televisión abierta argentina" width="440">
 
-# 🌸💜 Lista La Lindilla 🇦🇷🌿
+  <p><strong>Televisión abierta, noticias y radio.</strong><br>Un proyecto comunitario nacido en Argentina, pensado para compartir contenido de forma simple y accesible.</p>
 
-### Televisión, noticias y entretenimiento argentino en una experiencia simple y comunitaria 💜😁
+  <p>
+    <a href="https://frantdse.github.io/Lista-La-Lindilla/"><img src="https://img.shields.io/badge/SITIO_WEB-Visitar-6D3B83?style=flat-square" alt="Visitar el sitio"></a>
+    <a href="https://github.com/frantdse/Lista-La-Lindilla"><img src="https://img.shields.io/badge/HTML-100%25-E76F8A?style=flat-square&logo=html5&logoColor=white" alt="Desarrollado en HTML"></a>
+    <a href="https://github.com/frantdse/Lista-La-Lindilla/stargazers"><img src="https://img.shields.io/github/stars/frantdse/Lista-La-Lindilla?style=flat-square&color=8B6AAE&label=estrellas" alt="Estrellas en GitHub"></a>
+    <a href="https://github.com/frantdse/Lista-La-Lindilla/issues"><img src="https://img.shields.io/github/issues/frantdse/Lista-La-Lindilla?style=flat-square&color=6D3B83&label=issues" alt="Issues abiertos"></a>
+  </p>
 
-[![Visitar sitio](https://img.shields.io/badge/🌐_Visitar_sitio-La_Lindilla-8b5cf6?style=for-the-badge)](https://frantdse.github.io/Lista-La-Lindilla/)
-[![HTML](https://img.shields.io/badge/HTML-100%25-e34f26?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/frantdse/Lista-La-Lindilla)
-[![GitHub stars](https://img.shields.io/github/stars/frantdse/Lista-La-Lindilla?style=for-the-badge&logo=github&color=bd93f9)](https://github.com/frantdse/Lista-La-Lindilla/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/frantdse/Lista-La-Lindilla?style=for-the-badge&logo=github&color=8b5cf6)](https://github.com/frantdse/Lista-La-Lindilla/forks)
-[![GitHub issues](https://img.shields.io/github/issues/frantdse/Lista-La-Lindilla?style=for-the-badge&logo=github&color=e9a8ff)](https://github.com/frantdse/Lista-La-Lindilla/issues)
-
-**Un proyecto argentino, gratuito y hecho con cariño para compartir contenido abierto.** 🌿🇦🇷😊
-
-[🌐 Sitio web](https://frantdse.github.io/Lista-La-Lindilla/) · [📺 Lista M3U](#-cómo-usar-la-lista) · [🤝 Contribuir](#-contribuciones) · [📬 Contacto](#-contacto)
-
+  <p><sub>Hecho con 💜 en Argentina 🇦🇷 · Una comunidad de más de 700 personas</sub></p>
 </div>
 
 ---
 
-## 🌷 Sobre el proyecto
+## El proyecto
 
-**Lista La Lindilla** es un proyecto multimedia público y gratuito creado en Argentina. El sitio reúne una lista M3U con señales de televisión y radio, junto con información y una guía sencilla para empezar a usarla. La comunidad del proyecto supera las **700 personas usuarias**, en Argentina y en otros lugares. 💜🇦🇷
+**La Lindilla** es un proyecto multimedia público y gratuito creado en Santiago del Estero, Argentina. Reúne una página web y una lista M3U con señales de televisión y radio para reproductores compatibles.
 
-El proyecto nació en Santiago del Estero con una idea simple: hacer más accesible el contenido de libre disponibilidad para familiares, amistades y la comunidad. Hoy sigue creciendo gracias a quienes lo usan, comparten y ayudan a mejorarlo. 🌸🌿
+Nació como una forma sencilla de acercar contenido abierto a familiares y amistades. Hoy sigue creciendo junto a una comunidad de más de 700 personas en Argentina y otros lugares. 🌸
 
-## ✨ Qué ofrece
+## Qué vas a encontrar
 
-| 🌸 Funcionalidad | 💜 Descripción |
-| --- | --- |
-| 📺 **Lista M3U** | Acceso a una playlist para reproductores compatibles con IPTV. |
-| 🇦🇷 **Contenido variado** | Señales de noticias, televisión general, variedad y radio incluidas en la lista. |
-| 🔄 **Enlace remoto** | Usá la URL remota para consultar la versión publicada de la playlist. |
-| 📋 **Copiar con facilidad** | El sitio permite copiar el enlace M3U desde la página. |
-| 📱 **Diseño adaptable** | Interfaz pensada para navegar desde computadoras y dispositivos móviles. |
-| 🌸 **Identidad propia** | Diseño con pétalos animados, detalles florales y una estética cálida. |
-| ❔ **Ayuda integrada** | Preguntas frecuentes y una demostración de instalación disponibles en el sitio. |
-| 💌 **Contacto comunitario** | Canal para informar problemas con señales o compartir sugerencias. |
+- **Lista M3U remota** para cargar en reproductores compatibles.
+- **Señales organizadas** en categorías como noticias, televisión general, variedad y radio.
+- **Sitio adaptable** para navegar desde computadoras y dispositivos móviles.
+- **Guía de uso y preguntas frecuentes** en la página del proyecto.
+- **Contacto comunitario** para compartir sugerencias y reportar inconvenientes. 🌿
 
-## 🌐 Sitio web
+## Sitio web
 
-Visitá la página publicada en GitHub Pages: **[frantdse.github.io/Lista-La-Lindilla](https://frantdse.github.io/Lista-La-Lindilla/)** 🌸
+[**Visitar La Lindilla**](https://frantdse.github.io/Lista-La-Lindilla/) 💜
 
-## 📺 Cómo usar la lista
+## Usar la lista
 
-1. Copiá la URL remota de la playlist:
-
-   ```text
-   https://raw.githubusercontent.com/frantdse/Lista-La-Lindilla/refs/heads/main/lista.m3u
-   ```
-
-2. Abrí una aplicación o reproductor compatible con listas M3U/IPTV.
-3. Elegí la opción para agregar una lista mediante URL y pegá el enlace.
-4. Guardá la configuración y disfrutá del contenido disponible. 😊💜
-
-También podés descargar [`lista.m3u`](lista.m3u) y abrir el archivo localmente en un reproductor compatible. La disponibilidad de cada señal depende de su fuente y puede cambiar. 🌿
-
-## 🧰 Tecnologías y recursos
-
-- **HTML** para la estructura del sitio.
-- **Tailwind CSS** mediante CDN para estilos y diseño adaptable.
-- **JavaScript** para interacciones de la interfaz.
-- **Google Fonts** para tipografía.
-- **Formato M3U** para la lista multimedia.
-- **GitHub Pages** para publicar el sitio.
-
-## 🗂️ Estructura del repositorio
+Copiá esta dirección y agregala como lista remota en un reproductor compatible con M3U/IPTV:
 
 ```text
-Lista-La-Lindilla/
-├── index.html   # Sitio web y experiencia de usuario 🌸
-├── lista.m3u    # Playlist multimedia 💜
-└── README.md    # Documentación del proyecto 🇦🇷
+https://raw.githubusercontent.com/frantdse/Lista-La-Lindilla/refs/heads/main/lista.m3u
 ```
 
-## 🚀 Desarrollo local
+También podés descargar [`lista.m3u`](lista.m3u) y abrirla como archivo local. La disponibilidad de las señales depende de sus fuentes y puede variar.
 
-No hace falta instalar dependencias para revisar el sitio estático:
+## Desarrollo local
+
+El sitio es estático y no requiere instalar dependencias para una revisión básica:
 
 ```bash
 git clone https://github.com/frantdse/Lista-La-Lindilla.git
 cd Lista-La-Lindilla
 ```
 
-Después, abrí `index.html` en un navegador. Para probarlo mediante un servidor local, podés usar la extensión Live Server de tu editor favorito. 🌿😊
+Abrí `index.html` en un navegador o usá un servidor local de desarrollo, como Live Server.
 
-## 🤝 Contribuciones
+## Estructura
 
-¡Las ideas y mejoras son bienvenidas! 💜🌸 Podés abrir un [issue](https://github.com/frantdse/Lista-La-Lindilla/issues) para reportar un problema o proponer una mejora, o enviar un pull request.
+```text
+.
+├── assets/
+│   └── brand/
+│       └── la-lindilla.svg
+├── index.html
+├── lista.m3u
+└── README.md
+```
 
-1. Hacé un fork del repositorio.
-2. Creá una rama para tu cambio:
+## Contribuir
 
-   ```bash
-   git checkout -b mejora/mi-propuesta
-   ```
+Las sugerencias y mejoras son bienvenidas. Para reportar un problema o compartir una idea, [abrí un issue](https://github.com/frantdse/Lista-La-Lindilla/issues). También podés enviar un pull request con una descripción clara de tus cambios. 😊
 
-3. Realizá y probá tus cambios.
-4. Enviá un pull request con una descripción clara. 😁
-
-## 📬 Contacto
+## Contacto
 
 - **GitHub:** [@frantdse](https://github.com/frantdse)
 - **Correo:** [franchitiu@gmail.com](mailto:franchitiu@gmail.com)
-- **Sitio web:** [Lista La Lindilla 🌸](https://frantdse.github.io/Lista-La-Lindilla/)
+- **Sitio:** [frantdse.github.io/Lista-La-Lindilla](https://frantdse.github.io/Lista-La-Lindilla/)
 
-## 📄 Uso responsable
+## Uso responsable
 
-La playlist contiene enlaces a transmisiones de terceros. La disponibilidad y las condiciones de acceso dependen de cada fuente; verificá que el contenido que uses esté disponible de forma legítima en tu región y respetá los derechos y términos aplicables. Este repositorio no garantiza que todas las señales estén siempre disponibles. 🌿
+La playlist contiene enlaces a transmisiones de terceros. Su disponibilidad y condiciones de acceso dependen de cada fuente. Verificá que el contenido esté disponible legítimamente en tu región y respetá los derechos y términos aplicables. Este repositorio no garantiza la disponibilidad permanente de las señales.
 
 ---
 
 <div align="center">
-
-**Hecho con 💜 en Argentina 🇦🇷**
-
-🌸 Gracias por visitar, compartir y acompañar el proyecto 🌿😁😊
-
+  <sub>La Lindilla · Comunidad, contenido abierto y raíces argentinas 🌸🇦🇷</sub>
 </div>
