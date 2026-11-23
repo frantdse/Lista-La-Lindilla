@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista M3U La Lindilla - TV Argentina & Noticias | Actualizado 29 oct 2026</title>
+    <title>Lista M3U La Lindilla - TV Argentina & Noticias | Actualizado 23 nov 2026</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,19 +22,20 @@
                         sub: ['Poppins', 'sans-serif']
                     },
                     colors: {
-                        brand: {
-                            50: '#fff1f2',
-                            100: '#ffe4e6',
-                            200: '#fecdd3',
-                            300: '#fda4af',
-                            400: '#fb7185',
-                            500: '#f43f5e',
-                            600: '#e11d48',
+                        sakura: {
+                            50: '#fff5f7',
+                            100: '#ffe3e9',
+                            200: '#ffc7d4',
+                            300: '#ff9eb5',
+                            400: '#fb6f92',
+                            500: '#f43f6e',
+                            600: '#db2758',
                         }
                     },
                     boxShadow: {
-                        'apple-soft': '0 12px 32px -8px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.02)',
-                        'apple-hover': '0 20px 40px -12px rgba(244, 63, 94, 0.12), 0 8px 20px rgba(0, 0, 0, 0.04)'
+                        'sakura-card': '0 14px 36px -10px rgba(244, 63, 110, 0.08), 0 4px 14px -2px rgba(15, 23, 42, 0.03)',
+                        'sakura-lift': '0 24px 48px -12px rgba(244, 63, 110, 0.18), 0 8px 22px -4px rgba(251, 111, 146, 0.12)',
+                        'sakura-hero': '0 30px 70px -15px rgba(244, 63, 110, 0.15), 0 10px 25px -5px rgba(255, 199, 212, 0.38)'
                     }
                 }
             }
@@ -43,28 +44,42 @@
     
     <style>
         body {
-            background-color: #fafbfc;
-            color: #0f172a;
+            background-color: #fff9fa;
+            color: #1e293b;
             font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
+            background-image:
+                radial-gradient(circle at 12% 10%, rgba(255, 199, 212, 0.44) 0%, transparent 38%),
+                radial-gradient(circle at 88% 18%, rgba(255, 158, 181, 0.28) 0%, transparent 36%),
+                radial-gradient(circle at 50% 65%, rgba(255, 227, 233, 0.38) 0%, transparent 50%);
         }
 
-        .glass-apple {
-            background: rgba(255, 255, 255, 0.88);
+        .glass-sakura {
+            background: rgba(255, 251, 252, 0.85);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
 
-        .glass-card {
-            background: #ffffff;
-            border: 1px solid rgba(226, 232, 240, 0.8);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        .sakura-card {
+            background: rgba(255, 255, 255, 0.94);
+            border: 1px solid rgba(255, 199, 212, 0.65);
+            box-shadow: 0 14px 36px -10px rgba(244, 63, 110, 0.08), 0 4px 14px -2px rgba(15, 23, 42, 0.03);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .glass-card:hover {
-            border-color: rgba(251, 113, 133, 0.3);
-            box-shadow: 0 20px 35px -10px rgba(244, 63, 94, 0.08);
+        .sakura-card:hover {
+            border-color: rgba(251, 111, 146, 0.65);
+            box-shadow: 0 24px 48px -12px rgba(244, 63, 110, 0.16), 0 8px 22px -4px rgba(251, 111, 146, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Hero de ancho completo con atmósfera sakura y navideña suave */
+        .hero-full-sakura {
+            background:
+                radial-gradient(circle at 8% 15%, rgba(255, 199, 212, 0.58) 0%, transparent 42%),
+                radial-gradient(circle at 92% 20%, rgba(255, 158, 181, 0.36) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(255, 227, 233, 0.55) 0%, transparent 55%),
+                linear-gradient(180deg, #fff5f7 0%, #ffffff 62%, #fff8fa 100%);
         }
 
         /* Canvas Sakura Flotante Libre */
@@ -81,27 +96,56 @@
             outline: none !important;
         }
 
-        /* SVG Ocean Waves */
+        /* SVG Ocean Waves en tonos cerezo */
         .waves {
             position: relative;
             width: 100%;
-            height: 90px;
+            height: 95px;
             margin-bottom: -7px;
-            min-height: 70px;
-            max-height: 110px;
+            min-height: 75px;
+            max-height: 115px;
         }
 
         .parallax > use {
-            animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+            animation: move-forever 24s cubic-bezier(.55,.5,.45,.5) infinite;
         }
-        .parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; }
-        .parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; }
-        .parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; }
-        .parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; }
+        .parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 8s; }
+        .parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 11s; }
+        .parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 15s; }
+        .parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 22s; }
 
         @keyframes move-forever {
             0% { transform: translate3d(-90px,0,0); }
             100% { transform: translate3d(85px,0,0); }
+        }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(3deg); }
+        }
+
+        @keyframes sway-branch {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(1.8deg); }
+        }
+
+        @keyframes hat-tilt {
+            0%, 100% { transform: rotate(-14deg); }
+            50% { transform: rotate(-8deg) translateY(-2px); }
+        }
+
+        .animate-float-slow {
+            animation: float-slow 5s ease-in-out infinite;
+        }
+
+        .animate-branch {
+            transform-origin: top left;
+            animation: sway-branch 7s ease-in-out infinite;
+        }
+
+        .animate-santa-hat {
+            transform-origin: bottom left;
+            animation: hat-tilt 4.2s ease-in-out infinite;
         }
 
         #toast {
@@ -109,126 +153,214 @@
         }
     </style>
 </head>
-<body class="relative min-h-screen text-slate-800 antialiased selection:bg-rose-100 selection:text-rose-600">
+<body class="relative min-h-screen text-slate-800 antialiased selection:bg-sakura-200 selection:text-sakura-600">
 
     <!-- CANVAS CEREZOS (Pétalos cayendo sin caja ni bordes) -->
     <canvas id="sakura-canvas"></canvas>
 
     <!-- HEADER / NAVEGACIÓN -->
-    <header class="sticky top-0 z-50 w-full glass-apple border-b border-slate-200/60 px-4 lg:px-8 py-3.5 transition-all">
+    <header class="sticky top-0 z-50 w-full glass-sakura border-b border-sakura-200/60 px-4 lg:px-8 py-3.5 transition-all">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             
             <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-400 flex items-center justify-center shadow-md shadow-rose-200 group-hover:scale-105 transition-transform">
+                <div class="relative w-11 h-11 rounded-2xl bg-gradient-to-tr from-sakura-500 via-sakura-400 to-sakura-200 flex items-center justify-center shadow-md shadow-sakura-300/50 group-hover:scale-105 group-hover:rotate-3 transition-all">
+                    <!-- Mini gorrito navideño sobre el logo -->
+                    <svg class="w-6 h-6 absolute -top-2.5 -right-2 rotate-12 pointer-events-none" viewBox="0 0 36 36" fill="none">
+                        <path d="M7 24C9 12 18 7 28 11L16 25H7Z" fill="#e11d48"/>
+                        <path d="M27 11C29.5 12 31.5 14.5 32 17" stroke="#e11d48" stroke-width="2.5" stroke-linecap="round"/>
+                        <rect x="6" y="23" width="14" height="5" rx="2.5" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+                        <circle cx="32.5" cy="17.5" r="3" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+                    </svg>
                     <span class="text-xl">🌸</span>
                 </div>
                 <div class="flex flex-col">
                     <span class="font-heading font-extrabold text-lg tracking-tight text-slate-900 flex items-center gap-2">
                         LA LINDILLA
-                        <span class="text-[10px] font-sub font-semibold px-2 py-0.5 rounded-full bg-rose-50 text-rose-600 border border-rose-200">M3U</span>
+                        <span class="text-[10px] font-sub font-semibold px-2.5 py-0.5 rounded-full bg-sakura-50 text-sakura-600 border border-sakura-200">M3U</span>
                     </span>
-                    <span class="text-[11px] text-slate-500 font-medium">TV Argentina Familiar</span>
+                    <span class="text-[11px] text-sakura-600/80 font-medium">TV Argentina • Navidad & Sakura</span>
                 </div>
             </a>
 
             <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-                <a href="#inicio" class="hover:text-rose-600 transition-colors">Inicio</a>
-                <a href="#m3u" class="hover:text-rose-600 transition-colors">Lista M3U</a>
-                <a href="#historia" class="hover:text-rose-600 transition-colors">Nuestra Historia</a>
-                <a href="#faq" class="hover:text-rose-600 transition-colors">Preguntas Frecuentes</a>
-                <a href="#contacto" class="hover:text-rose-600 transition-colors">Contacto</a>
+                <a href="#inicio" class="hover:text-sakura-600 transition-colors">Inicio</a>
+                <a href="#m3u" class="hover:text-sakura-600 transition-colors">Lista M3U</a>
+                <a href="#historia" class="hover:text-sakura-600 transition-colors">Nuestra Historia</a>
+                <a href="#faq" class="hover:text-sakura-600 transition-colors">Preguntas Frecuentes</a>
+                <a href="#contacto" class="hover:text-sakura-600 transition-colors">Contacto</a>
             </nav>
 
             <div class="hidden md:flex items-center">
-                <button onclick="copyM3uUrl()" class="px-5 py-2.5 rounded-full text-xs font-bold bg-slate-900 hover:bg-rose-600 text-white shadow-md shadow-slate-200 transition-all transform hover:-translate-y-0.5">
+                <button onclick="copyM3uUrl()" class="px-5 py-2.5 rounded-full text-xs font-bold bg-gradient-to-r from-sakura-500 to-sakura-600 hover:from-sakura-600 hover:to-slate-900 text-white shadow-md shadow-sakura-300/50 transition-all transform hover:-translate-y-0.5 cursor-pointer">
                     Copiar Enlace M3U
                 </button>
             </div>
 
-            <button id="menu-btn" class="md:hidden p-2.5 rounded-2xl bg-slate-100 text-slate-700 hover:text-slate-900 focus:outline-none">
+            <button id="menu-btn" class="md:hidden p-2.5 rounded-2xl bg-sakura-50 border border-sakura-200 text-sakura-600 hover:text-sakura-700 focus:outline-none">
                 <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full glass-apple border-b border-slate-200 py-6 px-6 shadow-xl">
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full glass-sakura border-b border-sakura-200 py-6 px-6 shadow-xl">
             <div class="flex flex-col gap-4 text-base font-semibold text-slate-700">
-                <a href="#inicio" class="mobile-link py-2 border-b border-slate-100 hover:text-rose-600">Inicio</a>
-                <a href="#m3u" class="mobile-link py-2 border-b border-slate-100 hover:text-rose-600">Lista M3U</a>
-                <a href="#historia" class="mobile-link py-2 border-b border-slate-100 hover:text-rose-600">Nuestra Historia</a>
-                <a href="#faq" class="mobile-link py-2 border-b border-slate-100 hover:text-rose-600">Preguntas Frecuentes</a>
-                <a href="#contacto" class="mobile-link py-2 hover:text-rose-600">Contacto</a>
+                <a href="#inicio" class="mobile-link py-2 border-b border-sakura-100 hover:text-sakura-600">Inicio</a>
+                <a href="#m3u" class="mobile-link py-2 border-b border-sakura-100 hover:text-sakura-600">Lista M3U</a>
+                <a href="#historia" class="mobile-link py-2 border-b border-sakura-100 hover:text-sakura-600">Nuestra Historia</a>
+                <a href="#faq" class="mobile-link py-2 border-b border-sakura-100 hover:text-sakura-600">Preguntas Frecuentes</a>
+                <a href="#contacto" class="mobile-link py-2 hover:text-sakura-600">Contacto</a>
            </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section id="inicio" class="relative pt-12 lg:pt-20 pb-16 overflow-hidden bg-gradient-to-b from-rose-50/40 via-white to-slate-50">
+    <!-- HERO SECTION A ANCHO COMPLETO (FULL WIDTH SAKURA & NAVIDAD) -->
+    <section id="inicio" class="relative w-full hero-full-sakura border-b border-sakura-200/75 pt-14 pb-16 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28 overflow-hidden">
+        
+        <!-- Rama de cerezo decorativa SVG a ancho completo superior izquierdo -->
+        <svg class="w-52 sm:w-72 lg:w-80 h-auto absolute -top-2 -left-4 text-sakura-300/85 pointer-events-none select-none animate-branch" viewBox="0 0 280 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-12 16C50 34 102 60 162 112C188 135 218 146 248 150" stroke="#b57c92" stroke-width="3.4" stroke-linecap="round"/>
+            <path d="M78 50C102 35 130 29 158 31" stroke="#b57c92" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M126 84C136 108 142 132 140 156" stroke="#b57c92" stroke-width="2.2" stroke-linecap="round"/>
+            <g transform="translate(158, 31)">
+                <circle cx="0" cy="-9" r="7.5" fill="#ffc7d4"/><circle cx="9" cy="-2" r="7.5" fill="#ff9eb5"/>
+                <circle cx="5" cy="8" r="7.5" fill="#ffc7d4"/><circle cx="-5" cy="8" r="7.5" fill="#ff9eb5"/>
+                <circle cx="-9" cy="-2" r="7.5" fill="#ffe3e9"/><circle cx="0" cy="0" r="3.6" fill="#f43f6e"/>
+            </g>
+            <g transform="translate(98, 58) scale(1.18)">
+                <circle cx="0" cy="-9" r="7.5" fill="#ffe3e9"/><circle cx="9" cy="-2" r="7.5" fill="#ffc7d4"/>
+                <circle cx="5" cy="8" r="7.5" fill="#ff9eb5"/><circle cx="-5" cy="8" r="7.5" fill="#ffc7d4"/>
+                <circle cx="-9" cy="-2" r="7.5" fill="#ff9eb5"/><circle cx="0" cy="0" r="3.6" fill="#db2758"/>
+            </g>
+            <g transform="translate(190, 128) scale(0.98)">
+                <circle cx="0" cy="-9" r="7.5" fill="#ffc7d4"/><circle cx="9" cy="-2" r="7.5" fill="#ffe3e9"/>
+                <circle cx="5" cy="8" r="7.5" fill="#ff9eb5"/><circle cx="-5" cy="8" r="7.5" fill="#ffc7d4"/>
+                <circle cx="-9" cy="-2" r="7.5" fill="#ff9eb5"/><circle cx="0" cy="0" r="3.3" fill="#f43f6e"/>
+            </g>
+            <g transform="translate(140, 154) scale(0.85)">
+                <circle cx="0" cy="-9" r="7" fill="#ff9eb5"/><circle cx="9" cy="-2" r="7" fill="#ffc7d4"/>
+                <circle cx="5" cy="8" r="7" fill="#ffe3e9"/><circle cx="-5" cy="8" r="7" fill="#ff9eb5"/>
+                <circle cx="-9" cy="-2" r="7" fill="#ffc7d4"/><circle cx="0" cy="0" r="3" fill="#f43f6e"/>
+            </g>
+        </svg>
+
+        <!-- Gorrito navideño ilustrado flotante en esquina superior derecha -->
+        <div class="hidden sm:flex items-center justify-center w-20 h-20 rounded-3xl bg-white/90 border border-sakura-200 shadow-md absolute top-8 right-6 lg:right-14 animate-santa-hat pointer-events-none select-none">
+            <svg class="w-12 h-12" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 43C15 22 31 12 49 18L29 44H12Z" fill="#e11d48"/>
+                <path d="M15 41C18 26 30 18 44 20" stroke="#fb7185" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.6"/>
+                <path d="M48 18C53 20 56 24 57 29" stroke="#e11d48" stroke-width="4" stroke-linecap="round"/>
+                <rect x="9" y="40" width="25" height="9" rx="4.5" fill="#ffffff" stroke="#fecdd3" stroke-width="1.5"/>
+                <circle cx="57.5" cy="30.5" r="5" fill="#ffffff" stroke="#fecdd3" stroke-width="1.5"/>
+            </svg>
+        </div>
+
+        <!-- Halos decorativos a lo ancho del hero -->
+        <div class="w-96 h-96 rounded-full bg-gradient-to-tr from-sakura-200/45 to-pink-100/30 blur-3xl absolute -bottom-32 right-4 pointer-events-none"></div>
+        <div class="w-80 h-80 rounded-full bg-gradient-to-bl from-sakura-100/55 to-transparent blur-3xl absolute top-1/2 -left-20 pointer-events-none"></div>
+
+        <!-- Contenido central alineado con la página -->
         <div class="max-w-5xl mx-auto px-4 lg:px-8 text-center relative z-10">
             
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-rose-200 text-xs font-sub font-semibold text-rose-600 mb-8 shadow-sm">
-                <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>🗓️ Actualizado: 29 oct 2026</span>
+            <!-- Badge de fecha + Edición Navidad -->
+            <div class="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/95 border border-sakura-200 text-xs font-sub font-semibold text-sakura-600 mb-7 shadow-sm">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sakura-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-sakura-500"></span>
+                </span>
+                <span>🌸 Actualizado: 23 nov 2026</span>
+                <span class="text-sakura-300">|</span>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-600 border border-rose-200 font-bold">
+                    🎅 Edición Navidad
+                </span>
             </div>
 
-            <h1 class="font-heading font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight text-slate-900 mb-6">
-                LISTA M3U <span class="bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">LA LINDILLA</span>
+            <!-- Título principal con gorrito navideño y subrayado sakura -->
+            <h1 class="font-heading font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight text-slate-900 mb-6 leading-[1.08]">
+                LISTA M3U
+                <span class="relative inline-block mt-1 sm:mt-0">
+                    <svg class="w-10 h-10 sm:w-14 sm:h-14 absolute -top-6 -left-3 sm:-top-8 sm:-left-5 -rotate-12 pointer-events-none select-none" viewBox="0 0 64 64" fill="none">
+                        <path d="M12 43C15 22 31 12 49 18L29 44H12Z" fill="#e11d48"/>
+                        <path d="M48 18C53 20 56 24 57 29" stroke="#e11d48" stroke-width="4" stroke-linecap="round"/>
+                        <rect x="9" y="40" width="25" height="9" rx="4.5" fill="#ffffff" stroke="#fecdd3" stroke-width="1.5"/>
+                        <circle cx="57.5" cy="30.5" r="5" fill="#ffffff" stroke="#fecdd3" stroke-width="1.5"/>
+                    </svg>
+                    <span class="bg-gradient-to-r from-sakura-600 via-sakura-500 to-pink-500 bg-clip-text text-transparent">
+                        LA LINDILLA
+                    </span>
+                    <svg class="w-full h-3 absolute -bottom-1.5 left-0 text-sakura-300/85" viewBox="0 0 300 12" fill="none" preserveAspectRatio="none">
+                        <path d="M2 9C75 2 225 2 298 9" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+                    </svg>
+                </span>
             </h1>
 
-            <p class="max-w-2xl mx-auto text-base sm:text-xl text-slate-600 font-normal leading-relaxed mb-8">
-                Televisión argentina abierta, noticias y entretenimiento en vivo. Sincronización continua, liviana y gratuita para tu hogar.
+            <!-- Subtítulo -->
+            <p class="max-w-2xl mx-auto text-base sm:text-xl text-slate-600 font-normal leading-relaxed mb-10">
+                Televisión argentina abierta, noticias y entretenimiento en vivo con la calidez de los cerezos en flor. Sincronización continua, liviana y gratuita para tu hogar.
             </p>
 
-            <div class="flex flex-wrap items-center justify-center gap-2 mb-10 text-sm text-slate-500 font-medium">
-                <span>Hecho y actualizado con ❤️ por</span>
-                <a href="https://github.com/frantdse" target="_blank" rel="noopener opacity-90" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-rose-200 hover:border-rose-300 text-xs font-bold text-slate-800 shadow-sm transition-all hover:bg-rose-50/50">
-                    <svg class="w-3.5 h-3.5 fill-current text-slate-800" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    frantdse
-                </a>
+            <!-- Barra de autor + mini píldoras de diseño -->
+            <div class="pt-7 border-t border-sakura-200/70 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-3xl mx-auto text-xs text-slate-500">
+                <div class="flex items-center gap-2 font-medium">
+                    <span>Hecho y actualizado con ❤️ por</span>
+                    <a href="https://github.com/frantdse" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-sakura-200 hover:border-sakura-300 font-bold text-slate-800 transition-all hover:bg-sakura-50">
+                        <svg class="w-3.5 h-3.5 fill-current text-slate-800" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        frantdse
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-2">
+                    <span class="px-3 py-1 rounded-full bg-white/90 border border-sakura-200/70 text-sakura-600 font-semibold shadow-2xs">🌸 Cerezos en Flor</span>
+                    <span class="px-3 py-1 rounded-full bg-white/90 border border-sakura-200/70 text-slate-600 font-semibold shadow-2xs">✨ 100% Gratis</span>
+                </div>
             </div>
+        </div>
     </section>
 
     <!-- SECTION: LISTA M3U & REPRODUCTOR INTEGRADO -->
-    <section id="m3u" class="py-16 max-w-5xl mx-auto px-4 lg:px-8 relative z-10">
+    <section id="m3u" class="py-12 max-w-5xl mx-auto px-4 lg:px-8 relative z-10">
         
-        <div class="glass-card rounded-3xl p-6 sm:p-10 border border-slate-200 bg-white relative overflow-hidden shadow-apple-soft">
-            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-100">
+        <div class="sakura-card rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+            <div class="absolute -top-20 -right-20 w-56 h-56 rounded-full bg-sakura-200/35 blur-3xl pointer-events-none"></div>
+
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6 pb-6 border-b border-sakura-100 relative z-10">
                 <div>
-                    <span class="px-3 py-1 rounded-full bg-rose-50 text-rose-600 text-xs font-bold border border-rose-100 inline-block mb-2">
-                        Enlace Remoto Directo
+                    <span class="px-3.5 py-1 rounded-full bg-sakura-50 text-sakura-600 text-xs font-bold border border-sakura-200 inline-block mb-2">
+                        🌸 Enlace Remoto Directo
                     </span>
                     <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">Lista IPTV M3U</h2>
                 </div>
-                <div class="flex items-center gap-2 text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <div class="flex items-center gap-2 text-xs font-semibold text-sakura-600 bg-sakura-50/90 px-3.5 py-1.5 rounded-full border border-sakura-200">
+                    <span class="w-2 h-2 rounded-full bg-sakura-500 animate-pulse"></span>
                     Sincronización Automática 2026
                 </div>
             </div>
 
             <!-- Caja de enlace M3U limpia -->
-            <div class="mb-8">
+            <div class="mb-8 relative z-10">
                 <p class="text-xs sm:text-sm text-slate-600 mb-3">
                     Copia la siguiente URL e introdúcela en tu aplicación IPTV preferida (VLC, SSIPTV, Smart IPTV, TiviMate o IPTV Smarters):
                 </p>
 
-                <div class="relative flex flex-col sm:flex-row items-stretch gap-2 p-2 rounded-2xl bg-slate-50 border border-slate-200">
+                <div class="relative flex flex-col sm:flex-row items-stretch gap-2 p-2 rounded-2xl bg-sakura-50/60 border border-sakura-200/80 focus-within:ring-4 focus-within:ring-sakura-200/50 transition-all">
                     <div class="flex-1 p-3 font-mono text-xs text-slate-700 break-all select-all flex items-center">
                         <span id="m3u-url">https://raw.githubusercontent.com/frantdse/Lista-La-Lindilla/refs/heads/main/lista.m3u</span>
                     </div>
-                    <button onclick="copyM3uUrl()" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-rose-600 text-white font-bold text-xs transition-all flex items-center justify-center gap-2 shadow-md shrink-0">
+                    <button onclick="copyM3uUrl()" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-sakura-500 to-sakura-600 hover:from-sakura-600 hover:to-slate-900 text-white font-bold text-xs transition-all flex items-center justify-center gap-2 shadow-md shadow-sakura-300/40 shrink-0 cursor-pointer">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                         Copiar Enlace
                     </button>
                 </div>
             </div>
 
-            <!-- Marco de Demostración Apple Style -->
-            <div class="pt-6 border-t border-slate-100">
+            <!-- Marco de Demostración Estilo Sakura -->
+            <div class="pt-6 border-t border-sakura-100 relative z-10">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="font-heading font-bold text-base text-slate-900">Demostración en Video</h3>
-                    <span class="text-xs text-slate-400">Paso a paso de instalación</span>
+                    <h3 class="font-heading font-bold text-base text-slate-900 flex items-center gap-2">
+                        <span>🎬</span> Demostración en Video
+                    </h3>
+                    <span class="text-xs text-sakura-600/80 font-medium">Paso a paso de instalación</span>
                 </div>
-                <div class="rounded-2xl overflow-hidden bg-slate-900 aspect-video shadow-lg border border-slate-800">
+                <div class="rounded-2xl overflow-hidden bg-slate-900 aspect-video shadow-lg border-2 border-sakura-200/70">
                     <iframe 
                         src="https://rumble.com/embed/v7fgbqc/?pub=4m27kp" 
                         class="w-full h-full border-0" 
@@ -241,15 +373,15 @@
     </section>
 
     <!-- SECTION: NUESTRA HISTORIA (EXPANDIDO) -->
-    <section id="historia" class="py-16 max-w-5xl mx-auto px-4 lg:px-8 relative z-10">
-        <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-200/80 bg-gradient-to-b from-white via-rose-50/20 to-white">
+    <section id="historia" class="py-12 max-w-5xl mx-auto px-4 lg:px-8 relative z-10">
+        <div class="sakura-card rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-white via-sakura-50/40 to-white">
             
             <div class="max-w-3xl mx-auto">
-                <span class="text-xs font-sub font-bold text-rose-500 uppercase tracking-widest block mb-2">
-                    Trayectoria y Compromiso
+                <span class="text-xs font-sub font-bold text-sakura-500 uppercase tracking-widest block mb-2">
+                    🌸 Trayectoria y Compromiso
                 </span>
                 <h2 class="font-heading font-black text-3xl sm:text-4xl text-slate-900 mb-6">
-                    La Historia Detrás de La Lindilla 🌸
+                    La Historia Detrás de La Lindilla
                 </h2>
 
                 <div class="space-y-5 text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
@@ -261,11 +393,11 @@
                         Lo que comenzó como una simple lista recopilada para abuelos, tíos y amigos cercanos que querían ver las noticias nacionales y los canales de aire desde sus Smart TVs o teléfonos móviles, pronto se transformó en un proyecto colaborativo querido por miles de usuarios en todo el país y el exterior.
                     </p>
 
-                    <div class="p-6 rounded-2xl bg-white border border-rose-100 my-6 shadow-sm">
+                    <div class="p-6 rounded-2xl bg-white/95 border border-sakura-200/80 my-6 shadow-sm">
                         <h3 class="font-heading font-bold text-base text-slate-900 mb-2 flex items-center gap-2">
-                            <span>💡</span> Nuestra Filosofía
+                            <span>🌸</span> Nuestra Filosofía
                         </h3>
-                        <p class="text-xs sm:text-sm text-slate-500">
+                        <p class="text-xs sm:text-sm text-slate-600">
                             Creemos en la televisión abierta accesible y libre. No cobramos, no vendemos suscripciones ni alojamos transmisiones comerciales. Simplemente mantenemos enlaces abiertos públicos (Free-To-Air) ordenados, estables y actualizados periódicamente.
                         </p>
                     </div>
@@ -276,17 +408,17 @@
                 </div>
 
                 <!-- Hitos de La Lindilla -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-8 border-t border-slate-200">
-                    <div class="text-center p-4 rounded-2xl bg-white border border-slate-100">
-                        <span class="font-heading font-black text-2xl text-rose-500">2026</span>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-8 border-t border-sakura-200/70">
+                    <div class="text-center p-4 rounded-2xl bg-white border border-sakura-100 shadow-sm">
+                        <span class="font-heading font-black text-2xl text-sakura-500">2026</span>
                         <p class="text-xs text-slate-500 mt-1">Totalmente Optimizado</p>
                     </div>
-                    <div class="text-center p-4 rounded-2xl bg-white border border-slate-100">
-                        <span class="font-heading font-black text-2xl text-rose-500">100%</span>
+                    <div class="text-center p-4 rounded-2xl bg-white border border-sakura-100 shadow-sm">
+                        <span class="font-heading font-black text-2xl text-sakura-500">100%</span>
                         <p class="text-xs text-slate-500 mt-1">Señales Abiertas FTA</p>
                     </div>
-                    <div class="text-center p-4 rounded-2xl bg-white border border-slate-100">
-                        <span class="font-heading font-black text-2xl text-rose-500">Gratis</span>
+                    <div class="text-center p-4 rounded-2xl bg-white border border-sakura-100 shadow-sm">
+                        <span class="font-heading font-black text-2xl text-sakura-500">Gratis</span>
                         <p class="text-xs text-slate-500 mt-1">Sin Complicaciones</p>
                     </div>
                 </div>
@@ -296,50 +428,50 @@
     </section>
 
     <!-- SECTION: PREGUNTAS FRECUENTES (FAQ) -->
-    <section id="faq" class="py-16 max-w-4xl mx-auto px-4 lg:px-8 relative z-10">
+    <section id="faq" class="py-12 max-w-4xl mx-auto px-4 lg:px-8 relative z-10">
         <div class="text-center mb-10">
-            <span class="text-xs font-sub font-bold text-rose-500 uppercase tracking-wider">Centro de Ayuda</span>
+            <span class="text-xs font-sub font-bold text-sakura-500 uppercase tracking-wider">🌸 Centro de Ayuda</span>
             <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mt-1">Preguntas Frecuentes</h2>
         </div>
 
-        <div class="space-y-3">
+        <div class="space-y-3.5">
             
-            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200">
-                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-slate-900 focus:outline-none">
+            <div class="sakura-card rounded-2xl overflow-hidden">
+                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-slate-900 focus:outline-none cursor-pointer">
                     <span>¿Cómo instalo el enlace M3U en mi Smart TV o celular?</span>
-                    <svg class="faq-icon w-5 h-5 text-rose-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    <svg class="faq-icon w-5 h-5 text-sakura-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
-                <div class="faq-content hidden px-5 pb-5 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                <div class="faq-content hidden px-5 pb-5 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-sakura-100 pt-3">
                     Copia el enlace remoto disponible en esta página, abre tu aplicación IPTV favorita (como IPTV Smarters, SSIPTV, TiviMate o VLC) y pégalo en el campo "Añadir URL / M3U Playlist". La lista cargará los canales automáticamente.
                 </div>
             </div>
 
-            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200">
-                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-slate-900 focus:outline-none">
+            <div class="sakura-card rounded-2xl overflow-hidden">
+                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-slate-900 focus:outline-none cursor-pointer">
                     <span>¿La lista se actualiza automáticamente?</span>
-                    <svg class="faq-icon w-5 h-5 text-rose-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    <svg class="faq-icon w-5 h-5 text-sakura-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
-                <div class="faq-content hidden px-5 pb-5 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                <div class="faq-content hidden px-5 pb-5 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-sakura-100 pt-3">
                     Sí, si utilizas el <strong>Enlace Remoto</strong>. Cada vez que abras tu reproductor, este sincronizará la versión más reciente guardada en nuestros servidores sin necesidad de repetir la configuración.
                 </div>
             </div>
 
-            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200">
-                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-slate-900 focus:outline-none">
+            <div class="sakura-card rounded-2xl overflow-hidden">
+                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-slate-900 focus:outline-none cursor-pointer">
                     <span>¿Qué canales incluye La Lindilla?</span>
-                    <svg class="faq-icon w-5 h-5 text-rose-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    <svg class="faq-icon w-5 h-5 text-sakura-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
-                <div class="faq-content hidden px-5 pb-5 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                <div class="faq-content hidden px-5 pb-5 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-sakura-100 pt-3">
                     Incluye transmisiones públicas de aire y noticias de Argentina como TN, A24, Crónica TV, Canal 26, C5N, Telefe, El Trece, América TV, TV Pública, El Nueve y señales de entretenimiento o radio FM.
                 </div>
             </div>
 
-            <div class="glass-card rounded-2xl overflow-hidden border border-slate-200">
-                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-slate-900 focus:outline-none">
+            <div class="sakura-card rounded-2xl overflow-hidden">
+                <button class="faq-toggle w-full p-5 text-left flex items-center justify-between gap-4 font-heading font-bold text-sm sm:text-base text-slate-900 focus:outline-none cursor-pointer">
                     <span>¿Tiene algún costo utilizar esta lista?</span>
-                    <svg class="faq-icon w-5 h-5 text-rose-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    <svg class="faq-icon w-5 h-5 text-sakura-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
-                <div class="faq-content hidden px-5 pb-5 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-100 pt-3">
+                <div class="faq-content hidden px-5 pb-5 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-sakura-100 pt-3">
                     No, es 100% gratuita y comunitaria. Solo utilizamos transmisiones abiertas de libre acceso en internet.
                 </div>
             </div>
@@ -347,16 +479,94 @@
         </div>
     </section>
 
+    <!-- SECTION: BLOG DE NOTICIAS (CLIC DIRECTO EN EL PANEL ROSA) -->
+    <section id="blog" class="py-12 max-w-5xl mx-auto px-4 lg:px-8 relative z-10">
+        <div class="relative rounded-[2.25rem] overflow-hidden border border-sakura-200/90 bg-white shadow-sakura-hero">
+            <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                
+                <!-- Columna Izquierda: Información -->
+                <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center relative">
+                    <div class="absolute top-0 left-0 w-32 h-32 bg-sakura-100/50 rounded-br-full pointer-events-none"></div>
+
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sakura-50 border border-sakura-200 text-sakura-600 text-xs font-bold mb-5">
+                            <span>🌸 Actualidad & Novedades</span>
+                        </div>
+
+                        <h2 class="font-heading font-black text-3xl sm:text-4xl text-slate-900 mb-4 leading-tight">
+                            Nuestro Blog de <span class="text-sakura-500">Noticias</span>
+                        </h2>
+
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            Mantente informado con las últimas novedades, artículos de interés y actualizaciones de la comunidad en nuestro portal oficial <strong class="text-slate-900">Clara Luna</strong>.
+                        </p>
+
+                        <!-- Etiquetas temáticas -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-xl bg-sakura-50/80 border border-sakura-200/70 text-xs font-semibold text-sakura-600">📰 Actualidad</span>
+                            <span class="px-3 py-1 rounded-xl bg-sakura-50/80 border border-sakura-200/70 text-xs font-semibold text-sakura-600">📡 Avisos de Lista</span>
+                            <span class="px-3 py-1 rounded-xl bg-sakura-50/80 border border-sakura-200/70 text-xs font-semibold text-sakura-600">✨ Comunidad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Panel Rosa Clicable -->
+                <a href="https://claralunaportal.blogspot.com/?m=1" target="_blank" rel="noopener noreferrer" aria-label="Abrir el Blog de Noticias Clara Luna Portal" class="group lg:col-span-5 bg-gradient-to-br from-sakura-500 via-sakura-400 to-pink-400 hover:from-sakura-600 hover:via-sakura-500 hover:to-pink-500 p-8 sm:p-10 text-white flex flex-col justify-between relative overflow-hidden transition-all duration-300 cursor-pointer focus:outline-none focus:ring-4 focus:ring-sakura-300">
+                    <!-- Decoración floral SVG en el panel rosa -->
+                    <svg class="w-56 h-56 absolute -bottom-10 -right-10 text-white/15 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500 pointer-events-none select-none" viewBox="0 0 200 200" fill="currentColor">
+                        <circle cx="100" cy="45" r="34"/>
+                        <circle cx="152" cy="83" r="34"/>
+                        <circle cx="132" cy="145" r="34"/>
+                        <circle cx="68" cy="145" r="34"/>
+                        <circle cx="48" cy="83" r="34"/>
+                        <circle cx="100" cy="100" r="18" fill="#fff5f7"/>
+                    </svg>
+
+                    <div class="relative z-10 flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-bold tracking-wider uppercase">
+                            Portal Oficial
+                        </span>
+                        <span class="text-2xl group-hover:scale-110 transition-transform">🌸</span>
+                    </div>
+
+                    <div class="relative z-10 my-8 p-5 rounded-2xl bg-white/15 group-hover:bg-white/20 backdrop-blur-md border border-white/25 transition-all shadow-inner">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-white/85"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-white/55"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-white/35"></span>
+                            <span class="text-[11px] font-semibold text-white/90 ml-1">Clic para entrar</span>
+                        </div>
+                        <p class="font-heading font-extrabold text-xl tracking-tight mb-1">
+                            Clara Luna Portal
+                        </p>
+                        <p class="text-xs text-white/90 leading-relaxed">
+                            Notas, novedades y todo el pulso informativo que acompaña a la comunidad de La Lindilla.
+                        </p>
+                    </div>
+
+                    <div class="relative z-10 flex items-center justify-between text-xs font-bold text-white">
+                        <span>Toca aquí para leer</span>
+                        <span class="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                            Entrar
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION: CONTACTO -->
-    <section id="contacto" class="py-16 max-w-4xl mx-auto px-4 lg:px-8 relative z-10">
-        <div class="glass-card rounded-3xl p-8 sm:p-10 text-center bg-gradient-to-b from-white to-rose-50/30 border border-rose-200">
-            <span class="text-3xl mb-2 inline-block">🌸</span>
+    <section id="contacto" class="py-12 max-w-4xl mx-auto px-4 lg:px-8 relative z-10">
+        <div class="sakura-card rounded-3xl p-8 sm:p-10 text-center bg-gradient-to-b from-white to-sakura-50/50">
+            <span class="text-3xl mb-2 inline-block animate-float-slow">🌸</span>
             <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 mb-2">¿Quieres colaborar o reportar un canal?</h2>
             <p class="text-slate-600 text-xs sm:text-sm mb-6 max-w-lg mx-auto">
                 Si encuentras alguna señal interrumpida o quieres aportar un canal público, escríbenos directamente.
             </p>
-            <a href="mailto:franchitiu@gmail.com?subject=Contacto%20Lista%20M3U%20LA%20LINDILLA" class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs shadow-md shadow-rose-200 transition-all">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="mailto:franchitiu@gmail.com?subject=Contacto%20Lista%20M3U%20LA%20LINDILLA" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-sakura-500 hover:bg-sakura-600 text-white font-bold text-xs shadow-md shadow-sakura-300/50 transition-all transform hover:-translate-y-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 Enviar Correo Electrónico
             </a>
         </div>
@@ -369,16 +579,16 @@
                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(254, 205, 211, 0.4)" />
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(253, 164, 175, 0.3)" />
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(251, 113, 133, 0.2)" />
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255, 199, 212, 0.45)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255, 158, 181, 0.35)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(251, 111, 146, 0.22)" />
                 <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
             </g>
         </svg>
     </div>
 
     <!-- FOOTER -->
-    <footer class="bg-white border-t border-slate-200/80 py-8 relative z-10">
+    <footer class="bg-white border-t border-sakura-200/70 py-8 relative z-10">
         <div class="max-w-5xl mx-auto px-4 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
             <div class="flex items-center gap-2">
                 <span class="text-sm">🌸</span>
@@ -390,9 +600,9 @@
     </footer>
 
     <!-- NOTIFICACIÓN TOAST -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3">
-        <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
-            ✓
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-sakura-400/30 flex items-center gap-3">
+        <div class="w-6 h-6 rounded-full bg-sakura-500/20 text-sakura-300 flex items-center justify-center font-bold text-xs">
+            🌸
         </div>
         <span class="text-xs font-semibold" id="toast-msg">¡Enlace M3U copiado con éxito!</span>
     </div>
@@ -463,17 +673,24 @@
             }, 3000);
         }
 
-        // 4. ANIMACIÓN DE CEREZOS LIBRE Y SIN BORDES
+        // 4. ANIMACIÓN DE CEREZOS LIBRE Y SIN BORDES + PARALLAX SUAVE
         const canvas = document.getElementById('sakura-canvas');
         const ctx = canvas.getContext('2d');
 
         let width = canvas.width = window.innerWidth;
         let height = canvas.height = window.innerHeight;
+        let scrollOffset = 0;
 
         window.addEventListener('resize', () => {
             width = canvas.width = window.innerWidth;
             height = canvas.height = window.innerHeight;
         });
+
+        window.addEventListener('scroll', () => {
+            scrollOffset = window.scrollY * 0.08;
+        }, { passive: true });
+
+        const petalColors = ['#fb6f92', '#ff9eb5', '#ffc7d4', '#f43f6e'];
 
         class Petal {
             constructor() {
@@ -482,40 +699,43 @@
             reset() {
                 this.x = Math.random() * width;
                 this.y = Math.random() * -height;
-                this.size = Math.random() * 6 + 4;
-                this.speedY = Math.random() * 1.1 + 0.4;
-                this.speedX = Math.random() * 0.6 - 0.3;
+                this.size = Math.random() * 6.5 + 4.5;
+                this.speedY = Math.random() * 1.1 + 0.45;
+                this.speedX = Math.random() * 0.7 - 0.35;
                 this.rotation = Math.random() * 360;
-                this.rotationSpeed = Math.random() * 1.5 - 0.75;
-                this.opacity = Math.random() * 0.35 + 0.25;
+                this.rotationSpeed = Math.random() * 1.6 - 0.8;
+                this.opacity = Math.random() * 0.38 + 0.25;
+                this.color = petalColors[Math.floor(Math.random() * petalColors.length)];
+                this.swayPhase = Math.random() * Math.PI * 2;
             }
             update() {
                 this.y += this.speedY;
-                this.x += Math.sin(this.y * 0.008) + this.speedX;
+                this.x += Math.sin(this.y * 0.008 + this.swayPhase) * 0.9 + this.speedX;
                 this.rotation += this.rotationSpeed;
 
-                if (this.y > height + 20) {
+                if (this.y > height + 30) {
                     this.reset();
                 }
             }
             draw() {
+                const drawX = (this.x - scrollOffset % width + width) % width;
                 ctx.save();
-                ctx.translate(this.x, this.y);
+                ctx.translate(drawX, this.y);
                 ctx.rotate((this.rotation * Math.PI) / 180);
                 ctx.globalAlpha = this.opacity;
 
                 ctx.beginPath();
-                ctx.fillStyle = '#fb7185';
+                ctx.fillStyle = this.color;
                 ctx.moveTo(0, 0);
-                ctx.bezierCurveTo(-this.size / 2, -this.size / 2, -this.size, this.size / 3, 0, this.size);
-                ctx.bezierCurveTo(this.size, this.size / 3, this.size / 2, -this.size / 2, 0, 0);
+                ctx.bezierCurveTo(-this.size / 1.8, -this.size / 2, -this.size * 1.05, this.size / 3, 0, this.size);
+                ctx.bezierCurveTo(this.size * 1.05, this.size / 3, this.size / 1.8, -this.size / 2, 0, 0);
                 ctx.fill();
 
                 ctx.restore();
             }
         }
 
-        const petals = Array.from({ length: 28 }, () => new Petal());
+        const petals = Array.from({ length: 36 }, () => new Petal());
 
         function animateSakura() {
             ctx.clearRect(0, 0, width, height);
@@ -529,4 +749,4 @@
         animateSakura();
     </script>
 </body>
-</html>
+</html> 
